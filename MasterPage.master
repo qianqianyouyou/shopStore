@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register src="Web/Common/Controls/MainMenu.ascx" tagname="MainMenu" tagprefix="uc1" %>
+<%@ Register src="Web/Common/Controls/UserLogin.ascx" tagname="UserLogin" tagprefix="uc2" %>
+<%@ Register src="Web/Common/Controls/FindStationery.ascx" tagname="FindStationery" tagprefix="uc3" %>
+<%@ Register src="Web/Common/Controls/CatMenu.ascx" tagname="CatMenu" tagprefix="uc4" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%">
+<head runat="server">
+    <title>重庆特产—平台</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin: 0;height: 100%">
+    <form id="form1" runat="server" style="height: 100%">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+   <div style="height: 100%">
+   <div id="Div1" style="height: 15%">
+        <div id="log"></div>
+    </div>
+    <div id="mainMenu" style="height: 3%">
+        <uc1:MainMenu ID="MainMenu1" runat="server" />
+    </div>
+    <div id="categoryMenu" style="height: 3%">
+        <uc4:CatMenu ID="CatMenu1" runat="server" />
+    </div>
+        <div id="left"  style="height: 73%">
+        <asp:UpdatePanel ID="UpdatePanel4" runat="server">
+        <ContentTemplate>
+        <uc2:UserLogin ID="UserLogin2" runat="server" />
+        </ContentTemplate>
+        </asp:UpdatePanel>
+            <uc3:FindStationery ID="FindStationery1" runat="server" />
+        </div>
+        <div id="navigator" style="height: 2%">
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+            </asp:SiteMapPath>
+            <br />
+        </div>
+        <div id="content" style="height: 75%">
+            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+            <ContentTemplate>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+    <div id="bottom" style="height: 6%">
+    <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+    <ContentTemplate>
+    <asp:Label ID="Label1" runat="server"></asp:Label>
+    <asp:Timer ID="Timer1" runat="server" Interval="30000" OnTick="Timer1_Tick"></asp:Timer>
+    </ContentTemplate>   
+    </asp:UpdatePanel>
+    </div>
+   </div>
+    </form>
+</body>
+</html>

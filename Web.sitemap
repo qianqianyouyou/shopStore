@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="商城首页"  url="~/Content1.aspx">
+    <siteMapNode title="分类管理" url="~/Web/Admin/CategoryManage.aspx">
+      <siteMapNode title="添加分类" url="~/Web/Admin/CategoryAdd.aspx"/>
+    </siteMapNode>
+    <siteMapNode title="商品管理"  url="~/Web/Admin/StationeryManage.aspx">
+      <siteMapNode title="商品查询" url="~/Web/User/StationeryFind.aspx" />
+      <siteMapNode title="商品查看" url="~/Web/User/StationeryShow.aspx" />
+      <siteMapNode title="修改商品信息" url="~/Software.aspx" />
+    </siteMapNode>
+    <siteMapNode title="用户管理" url="~/Web/Admin/UserManage.aspx">
+      <siteMapNode title="修改用户" url="~/Training.aspx" />
+      <siteMapNode title="注册用户" url="~/ss1.aspx" />
+      <siteMapNode title="注册用户" url="~/ss.aspx" />
+    </siteMapNode>
+    <siteMapNode title="购物车" url="~/Web/Memeber/CartBrowser.aspx"/>
+  </siteMapNode>
+</siteMap>
